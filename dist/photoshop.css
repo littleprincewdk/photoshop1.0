@@ -1,0 +1,129 @@
+*{
+    padding:0;
+    margin:0;
+}
+body{
+    background-color: #000;
+    color:#fff;
+    font-size: 14px;
+    /*双击选中文字bug*/
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+canvas{
+    border:solid gray 2px;
+    cursor:move;
+}
+#source-canvas{
+    float:left;
+    margin-left:10px;
+}
+#destination-canvas{
+    float:right;
+    margin-right:10px;
+}
+.controller{
+    width:340px;
+    margin: 0 auto;
+    margin-top:10px;
+}
+#effect{
+    display: block;
+    width:90%;
+    height:40px;
+    margin:0 auto;
+    border:solid 2px gray;
+    border-radius: 4px;
+    background-color: #000;
+    color:#fff;
+    font-size: 18px;
+}
+.controller-slider{
+    margin:20px;
+}
+.controller-slider>li{
+    display: none;
+    position: relative;
+    margin:10px 0;
+    text-align: center;
+}
+.controller-slider>li>label{
+    display:block;
+    margin-bottom: 5px;
+}
+.controller-slider>li>input{
+    width:90%;
+}
+.controller-slider>li>.min{
+    display:block;
+    position: absolute;
+    left:0;
+    bottom:-10px;
+    width:20px;
+    height:15px;
+    font-size: smaller;
+    color:grey;
+}
+.controller-slider>li>.max{
+    display:block;
+    position: absolute;
+    right:0;
+    bottom:-10px;
+    width:20px;
+    height:15px;
+    font-size: smaller;
+    color:grey;
+}
+/*裁剪工具*/
+.tools{
+    position:fixed;
+    bottom:0;
+    left:calc(50% - 500px);
+    width:1000px;
+    height:40px;
+    border:solid #fff 3px;
+    border-radius: 10px;
+    opacity: 0.3;
+    transition-duration: 500ms;
+}
+.tools:hover{
+    opacity: 1.0;
+}
+.tools:before{
+    content: "裁剪工具";
+    display:block;
+    position: absolute;
+    left:-100px;
+    top:10px;
+    font-size:20px;
+    font-weight: 900;
+    color: #0e5fff;
+    opacity: 1.0;!important;
+}
+.tools ul:after{
+    display:table;
+    content:"";
+    clear: both;
+}
+.tools li{
+    float:left;
+}
+.tools li a{
+    display:block;
+    padding:14px;
+    font-weight: 700;
+    color:#fff;
+}
+.tools li a:visited {
+    background-color: #558eff;
+}
+.tools li a:hover{
+    background-color: grey;
+}

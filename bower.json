@@ -1,0 +1,25 @@
+{
+  "name": "photoshop1.0",
+  "homepage": "princekin.tjxuechuang.com/projects/photoshop1.0",
+  "authors": [
+    "wudengke <2889110370@qq.com>"
+  ],
+  "description": "在线photoshop",
+  "main": "photoshop.js",
+  "keywords": [
+    "photoshop",
+    "canvas"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.1",
+    "jquery-mousewheel": "jquery/jquery-mousewheel#^3.1.13"
+  }
+}

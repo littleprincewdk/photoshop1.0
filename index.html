@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PhotoShop</title>
+    <link type="text/css" rel="stylesheet" href="./dist/photoshop.css"/>
+</head>
+<body>
+<canvas id="source-canvas"></canvas>
+<canvas id="middle-canvas" style="display:none;" ></canvas>
+<canvas id="destination-canvas"></canvas>
+<div class="controller">
+    <!--<form action="uploadImage.php" method="post">
+        <label>
+            图片
+            <input type="file" name="image" id="image" />
+        </label>
+        <input type="submit"/>
+    </form>-->
+    <select id="effect">
+        <option value="">--选择一种效果--</option>
+        <option value="opacity">opacity</option>
+        <option value="grey">grey</option>
+        <option value="blackWhite">blackWhite</option>
+        <option value="reverse">reverse</option>
+        <option value="blur">blur</option>
+        <option value="mirror">mirror</option>
+        <option value="mirror2">mirror+</option>
+        <option value="mirror3">mirror++</option>
+        <option value="mosaic">mosaic</option>
+        <option value="bright">bright</option>
+        <option value="saturation">saturation</option>
+        <option value="rotate">rotate</option>
+    </select>
+
+    <ul class="controller-slider">
+        <li><label>透明度</label><input type="range"  id="opacity-opacity" /></li>
+        <li><label>灰度</label><input type="range"  id="grey-grey" /></li>
+        <li><label>阈值</label><input type="range"  id="blackWhite-threshold" /></li>
+        <li><label>模糊距离</label><input type="range"  id="blur-distance" /></li>
+        <li><label>马赛克大小</label><input type="range" id="mosaic-size" /></li>
+        <li><label>马赛克距离</label><input type="range" id="mosaic-distance" /></li>
+        <li><label>亮度</label><input type="range" id="bright-brightness"/></li>
+        <li><label>饱和度</label><input type="range" id="saturation-saturation"/></li>
+        <li><label>角度</label><input type="range" id="rotate-angle"/></li>
+    </ul>
+
+</div>
+<div class="tools">
+    <ul>
+        <li><a href="#" id="polygon">多边形</a></li>
+        <li><a href="#" id="rect">矩形</a></li>
+        <li><a href="#" id="circle">圆形</a></li>
+        <li><a href="#" id="ellipse">椭圆形</a></li>
+    </ul>
+</div>
+<script src="./bower_components/jquery/dist/jquery.min.js"></script>
+<script src="./bower_components/jquery-mousewheel/jquery.mousewheel.js"></script>
+<script src="./dist/photoshop.js"></script>
+</body>
+</html>
